@@ -1,0 +1,32 @@
+<%= form_for(shogi) do |f| %>
+  <% if shogi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(shogi.errors.count, "error") %> prohibited this shogi from being saved:</h2>
+
+      <ul>
+      <% shogi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Player %>
+    <%= f.text_field :Player %>
+  </div>
+
+  <div class="field">
+    <%= f.label :FavoriteStrategy %>
+    <%= f.text_field :FavoriteStrategy %>
+  </div>
+
+  <div class="field">
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

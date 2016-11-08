@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Player: MyString
+  FavoriteStrategy: MyString
+  picture: MyString
+
+two:
+  Player: MyString
+  FavoriteStrategy: MyString
+  picture: MyString

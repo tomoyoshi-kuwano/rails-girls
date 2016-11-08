@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shogis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Favoritestrategy</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shogis.each do |shogi| %>
+      <tr>
+        <td><%= shogi.Player %></td>
+        <td><%= shogi.FavoriteStrategy %></td>
+        <td><%= shogi.picture %></td>
+        <td><%= link_to 'Show', shogi %></td>
+        <td><%= link_to 'Edit', edit_shogi_path(shogi) %></td>
+        <td><%= link_to 'Destroy', shogi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shogi', new_shogi_path %>

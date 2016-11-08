@@ -1,0 +1,1 @@
+json.array! @shogis, partial: 'shogis/shogi', as: :shogi

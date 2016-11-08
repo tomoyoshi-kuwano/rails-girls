@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @shogi.Player %>
+</p>
+
+<p>
+  <strong>Favoritestrategy:</strong>
+  <%= @shogi.FavoriteStrategy %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@shogi.picture_url, width: 600) if @shogi.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_shogi_path(@shogi) %> |
+<%= link_to 'Back', shogis_path %>
