@@ -10,6 +10,8 @@ class ShogisController < ApplicationController
   # GET /shogis/1
   # GET /shogis/1.json
   def show
+    @comments = @shogi.comments.all
+    @comment = @shogi.comments.build
   end
 
   # GET /shogis/new
